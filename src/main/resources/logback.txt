@@ -1,0 +1,6 @@
+[X] Crear artefacto y analizar dependencias
+[X] Arrancar proyecto correctamente
+[] Configurar Docker
+[] Configurar docker compose para crear bdd
+[] Configurar logs
+[] Configurar properties entorno dev (docker) y entorno PRO

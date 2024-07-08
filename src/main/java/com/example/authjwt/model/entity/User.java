@@ -1,4 +1,4 @@
-package com.example.demopresupuestos.model.entity;
+package com.example.authjwt.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

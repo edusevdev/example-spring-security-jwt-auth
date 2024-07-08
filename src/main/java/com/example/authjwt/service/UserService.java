@@ -1,6 +1,6 @@
-package com.example.demopresupuestos.service;
+package com.example.authjwt.service;
 
-import com.example.demopresupuestos.model.entity.User;
+import com.example.authjwt.model.entity.User;
 
 import java.util.List;
 

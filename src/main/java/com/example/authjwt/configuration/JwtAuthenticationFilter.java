@@ -1,6 +1,6 @@
-package com.example.demopresupuestos.configuration;
+package com.example.authjwt.configuration;
 
-import com.example.demopresupuestos.model.entity.User;
+import com.example.authjwt.model.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

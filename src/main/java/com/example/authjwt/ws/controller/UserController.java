@@ -1,7 +1,7 @@
-package com.example.demopresupuestos.ws.controller;
+package com.example.authjwt.ws.controller;
 
-import com.example.demopresupuestos.model.entity.User;
-import com.example.demopresupuestos.service.UserService;
+import com.example.authjwt.model.entity.User;
+import com.example.authjwt.service.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

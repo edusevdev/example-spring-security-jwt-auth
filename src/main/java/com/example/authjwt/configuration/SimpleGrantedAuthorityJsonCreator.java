@@ -1,4 +1,4 @@
-package com.example.demopresupuestos.configuration;
+package com.example.authjwt.configuration;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

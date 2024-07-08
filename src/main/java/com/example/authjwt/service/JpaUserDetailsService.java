@@ -1,7 +1,7 @@
-package com.example.demopresupuestos.service;
+package com.example.authjwt.service;
 
-import com.example.demopresupuestos.model.entity.User;
-import com.example.demopresupuestos.model.repository.UserRepository;
+import com.example.authjwt.model.entity.User;
+import com.example.authjwt.model.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

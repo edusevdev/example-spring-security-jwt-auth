@@ -1,4 +1,4 @@
-package com.example.demopresupuestos.configuration;
+package com.example.authjwt.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

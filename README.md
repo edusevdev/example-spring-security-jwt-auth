@@ -1,2 +1,1 @@
-# spring-presupuestos
-Demo de una aplicación de estimación de presupuestos
+Sample project to use jwt authentication with spring security

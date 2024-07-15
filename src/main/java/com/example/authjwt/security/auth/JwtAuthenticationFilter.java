@@ -1,4 +1,4 @@
-package com.example.authjwt.configuration;
+package com.example.authjwt.security.auth;
 
 import com.example.authjwt.model.entity.User;
 import com.fasterxml.jackson.databind.ObjectMapper;

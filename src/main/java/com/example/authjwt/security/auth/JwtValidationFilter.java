@@ -1,4 +1,4 @@
-package com.example.authjwt.configuration;
+package com.example.authjwt.security.auth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import java.io.IOException;
 import java.util.*;
 
-import static com.example.authjwt.configuration.JwtAuthenticationFilter.*;
+import static com.example.authjwt.security.auth.JwtAuthenticationFilter.*;
 
 @Slf4j
 public class JwtValidationFilter extends BasicAuthenticationFilter {

@@ -1,4 +1,4 @@
-package com.example.authjwt.service;
+package com.example.authjwt.service.user;
 
 import com.example.authjwt.model.entity.User;
 

@@ -1,4 +1,4 @@
-package com.example.authjwt.configuration;
+package com.example.authjwt.security.auth;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

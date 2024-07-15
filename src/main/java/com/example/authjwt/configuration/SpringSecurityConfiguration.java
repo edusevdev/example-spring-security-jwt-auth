@@ -1,5 +1,7 @@
 package com.example.authjwt.configuration;
 
+import com.example.authjwt.security.auth.JwtAuthenticationFilter;
+import com.example.authjwt.security.auth.JwtValidationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -44,11 +46,16 @@ public class SpringSecurityConfiguration {
         return new BCryptPasswordEncoder();
     }
 
+    /**
+     * IMPORTANT !! Put the final asterisk for allow urls (that could be necessary), for example, swagger didn't work
+     * because use files that were in the childs domains like ".../swagger-ui/swagger.css"
+     */
     @Bean
     SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         // We define that only the login endpoint is public, the rest will need to be authenticated
         return httpSecurity.authorizeHttpRequests(authz -> authz
                         .requestMatchers("/login").permitAll()
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**").permitAll()
 //                        .requestMatchers("/users").hasRole("admin") We can also restrict by roles
                         .anyRequest().authenticated())
                 .addFilter(new JwtAuthenticationFilter(authenticationConfiguration.getAuthenticationManager()))

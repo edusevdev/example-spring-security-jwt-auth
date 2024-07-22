@@ -15,19 +15,17 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.crypto.SecretKey;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.authjwt.security.auth.AuthConstants.*;
+
 public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
     private AuthenticationManager authenticationManager;
-    protected static final SecretKey SECRET_KEY = Jwts.SIG.HS256.key().build();
-    protected static final String PREFIX_TOKEN = "Bearer ";
-    protected static final String HEADER_AUTHORIZATION = "Authorization";
 
     public JwtAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
@@ -58,7 +56,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         String username = ((org.springframework.security.core.userdetails.User) authResult.getPrincipal()).getUsername();
         Collection<? extends GrantedAuthority> roles = authResult.getAuthorities();
 
-        // Nunca poner aquí datos sensibles, como la pass o el dni
+        // Never put here sensible data as passwords or ID numbers (DNI)
         Claims claims = Jwts.claims()
                 .add("username", username)
                 .add("authorities", new ObjectMapper().writeValueAsString(roles))

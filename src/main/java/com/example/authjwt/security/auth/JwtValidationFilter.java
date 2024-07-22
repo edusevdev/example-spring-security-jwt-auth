@@ -20,7 +20,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import java.io.IOException;
 import java.util.*;
 
-import static com.example.authjwt.security.auth.JwtAuthenticationFilter.*;
+import static com.example.authjwt.security.auth.AuthConstants.*;
 
 @Slf4j
 public class JwtValidationFilter extends BasicAuthenticationFilter {
@@ -64,7 +64,7 @@ public class JwtValidationFilter extends BasicAuthenticationFilter {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
             response.setContentType("application/json");
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("Se ha producido un error genérico en JwtValidationFilter: ", e);
         }
     }
 }
